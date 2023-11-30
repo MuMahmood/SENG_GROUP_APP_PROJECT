@@ -1,8 +1,10 @@
 package com.example.seng_group_app_project;
 
 import androidx.appcompat.app.AppCompatActivity;
-
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
+import android.content.Intent;
 
 public class Activity2 extends AppCompatActivity {
 
@@ -10,5 +12,16 @@ public class Activity2 extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_2);
+
+        Button btnInsurance = findViewById(R.id.btnInsurance);
+
+        btnInsurance.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Intent to start the ActivityInsuranceInfo
+                Intent intent = new Intent(Activity2.this, ActivityInsuranceInfo.class);
+                startActivity(intent);
+            }
+        });
     }
 }
