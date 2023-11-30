@@ -4,7 +4,7 @@ plugins {
 
 android {
     namespace = "com.example.seng_group_app_project"
-    compileSdk = 33
+    compileSdk = 34
 
     defaultConfig {
         applicationId = "com.example.seng_group_app_project"
