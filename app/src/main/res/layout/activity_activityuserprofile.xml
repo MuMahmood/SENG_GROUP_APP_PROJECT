@@ -8,6 +8,18 @@
     android:background="@drawable/screenback"
     tools:context=".Activityuserprofile">
 
+    <TextView
+        android:id="@+id/Title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_gravity="center_horizontal"
+        android:textColor="@color/black"
+        android:text="User Profile"
+        android:textStyle="bold"
+        android:textSize="25sp"
+        android:layout_marginBottom="10dp" />
+
     <ImageView
         android:id="@+id/avatarImageView"
         android:layout_width="100dp"
@@ -100,7 +112,7 @@
         android:layout_width="match_parent"
         android:layout_height="1dp"
         android:background="@android:color/black"
-        android:layout_marginTop="250dp"
+        android:layout_marginTop="150dp"
         android:layout_marginBottom="8dp"/>
 
     <LinearLayout
@@ -114,7 +126,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Home"
-            android:layout_marginRight="16dp"/>
+            android:layout_marginRight="10dp"/>
 
         <Button
             android:id="@+id/btnInsurance"

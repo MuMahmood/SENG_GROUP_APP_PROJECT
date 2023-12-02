@@ -13,6 +13,21 @@
         android:theme="@style/Theme.SENG_GROUP_APP_PROJECT"
         tools:targetApi="31">
         <activity
+            android:name=".Activitysetting"
+            android:exported="false" />
+        <activity
+            android:name=".ActivityLogin"
+            android:exported="false" />
+        <activity
+            android:name=".Activitydrivinganalytics"
+            android:exported="false" />
+        <activity
+            android:name=".Activitydriverinsuranceinfo"
+            android:exported="false" />
+        <activity
+            android:name=".ActivityHome"
+            android:exported="false" />
+        <activity
             android:name=".Activityuserprofile"
             android:exported="false" />
         <activity
