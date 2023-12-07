@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@drawable/screenback"
+    android:padding="20dp">
+
+    <TextView
+        android:id="@+id/Title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:textColor="@color/black"
+        android:text="Insurance Information"
+        android:textStyle="bold"
+        android:textSize="25sp"
+        android:layout_marginBottom="20dp" />
+
+    <TextView
+        android:id="@+id/PolicyNumber"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Policy Number: abc123 "
+        android:textSize="20sp"
+        android:layout_marginBottom="8dp" />
+
+    <TextView
+        android:id="@+id/ExpirationDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Expiration Date: 11/11/2024"
+        android:textSize="20sp"
+        android:layout_marginBottom="8dp"/>
+
+    <TextView
+        android:id="@+id/RenewalDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Renewal Date: 10/10/2024"
+        android:textSize="20sp"
+        android:layout_marginBottom="8dp"/>
+
+    <TextView
+        android:id="@+id/YearlyRate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Yearly Rate: $5400"
+        android:textSize="20sp"
+        android:layout_marginBottom="8dp"/>
+
+    <TextView
+        android:id="@+id/MonthlyRate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Monthly Rate: $450"
+        android:textSize="20sp"
+        android:layout_marginBottom="8dp"/>
+
+    <TextView
+        android:id="@+id/InsuranceHistory"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Insurance History: \n1. $450 - 01/01/2024 \n2. $450 - 02/01/2024 \n3. $450 - 03/01/2024"
+        android:textSize="20sp"
+        android:layout_marginBottom="8dp"/>
+
+
+    <Button
+        android:id="@+id/btnUpdateEstimate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:text="Get Updated Insurance Estimate"
+        android:layout_marginTop="8dp" />
+
+    <TextView
+        android:id="@+id/BillingInfoTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Billing Information:"
+        android:textColor="@color/black"
+        android:textSize="22sp"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="4dp"/>
+
+    <TextView
+        android:id="@+id/BillingAddress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Address: 321 Avenue Rd"
+        android:textSize="15sp"
+        android:layout_marginBottom="4dp"/>
+
+    <TextView
+        android:id="@+id/BillingPhone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Phone: 0987654321"
+        android:textSize="15sp"
+        android:layout_marginBottom="4dp"/>
+
+    <TextView
+        android:id="@+id/BillingEmail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Email: Muhammad@gmail.com"
+        android:textSize="15sp"
+        android:layout_marginBottom="4dp"/>
+
+    <TextView
+        android:id="@+id/PaymentMethod"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Payment Method: Debit Card"
+        android:textSize="15sp"
+        android:layout_marginBottom="1dp"/>
+
+
+    <Button
+        android:id="@+id/btnClaimPDF"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:text="File Insurance Claim (PDF)"
+        android:layout_marginTop="6dp"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@android:color/black"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="1dp"/>
+
+    <Button
+        android:id="@+id/btnHome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:text="Home"
+        android:layout_marginTop="1dp" />
+
+</LinearLayout>

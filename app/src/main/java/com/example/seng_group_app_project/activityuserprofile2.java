@@ -7,12 +7,12 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
-public class Activityuserprofile extends AppCompatActivity {
+public class activityuserprofile2 extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_activityuserprofile);
+        setContentView(R.layout.activity_activityuserprofile2);
 
         Button btnInsurance = findViewById(R.id.btnInsurance);
         Button btnHome = findViewById(R.id.btnHome);
@@ -20,7 +20,7 @@ public class Activityuserprofile extends AppCompatActivity {
         btnInsurance.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(Activityuserprofile.this, ActivityInsuranceInfo.class);
+                Intent intent = new Intent(activityuserprofile2.this, ActivityInsuranceInfo.class);
                 startActivity(intent);
             }
         });
@@ -28,7 +28,7 @@ public class Activityuserprofile extends AppCompatActivity {
         btnHome.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(Activityuserprofile.this, ActivityHome.class);
+                Intent intent = new Intent(activityuserprofile2.this, ActivityHome.class);
                 startActivity(intent);
             }
         });

@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/screenback"
+    tools:context=".Activityuserprofile">
+
+    <TextView
+        android:id="@+id/Title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_gravity="center_horizontal"
+        android:textColor="@color/black"
+        android:text="User Profile"
+        android:textStyle="bold"
+        android:textSize="25sp"
+        android:layout_marginBottom="1dp" />
+
+    <ImageView
+        android:id="@+id/avatarImageView"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:src="@drawable/avatars"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="1dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <!-- Nickname EditText -->
+    <TextView
+        android:id="@+id/nicknameTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Nickname"
+        android:padding="16dp"/>
+
+
+    <EditText
+        android:id="@+id/fullNameEditText"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:hint="Full Name"
+        android:padding="16dp"/>
+
+    <!-- Email Address EditText -->
+    <EditText
+        android:id="@+id/emailEditText"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:hint="Email Address"
+        android:padding="16dp"/>
+
+    <!-- Phone Number EditText -->
+    <EditText
+        android:id="@+id/phoneEditText"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:hint="Phone Number"
+        android:padding="16dp"/>
+
+    <!-- Date of Birth EditText -->
+    <EditText
+        android:id="@+id/dobEditText"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:hint="Date of Birth"
+        android:padding="16dp"/>
+
+    <!-- Vehicle Information EditText -->
+    <EditText
+        android:id="@+id/vehicleInfoEditText"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:hint="Vehicle Information"
+        android:padding="16dp"/>
+
+    <!-- Policy Number EditText -->
+    <EditText
+        android:id="@+id/policyNumberEditText"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:hint="Policy Number"
+        android:padding="16dp"/>
+
+    <!-- Policy Expiration EditText -->
+    <EditText
+        android:id="@+id/policyExpirationEditText"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:hint="Policy Expiration"
+        android:padding="16dp"/>
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_gravity="center_horizontal">
+
+        <Button
+            android:id="@+id/btnHome"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Home"
+            android:layout_marginRight="10dp"/>
+
+        <Button
+            android:id="@+id/btnInsurance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Insurance" />
+
+        <Button
+            android:id="@+id/btnSaveNickname"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="8dp"
+            android:text="Save Nickname" />
+
+    </LinearLayout>
+
+</LinearLayout>

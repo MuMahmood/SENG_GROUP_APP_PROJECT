@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "760098632921",
+    "project_id": "seng-group-app-project",
+    "storage_bucket": "seng-group-app-project.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:760098632921:android:c4a122ba71ee1640a3fac8",
+        "android_client_info": {
+          "package_name": "com.example.seng_group_app_project"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAvZTDm9mnX7k9Sq0p0w8ZOgctdJ8HaG_0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

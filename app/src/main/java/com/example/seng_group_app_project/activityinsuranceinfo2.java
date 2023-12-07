@@ -7,28 +7,18 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
-public class Activityuserprofile extends AppCompatActivity {
+public class activityinsuranceinfo2 extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_activityuserprofile);
+        setContentView(R.layout.activity_activityinsuranceinfo2);
 
-        Button btnInsurance = findViewById(R.id.btnInsurance);
         Button btnHome = findViewById(R.id.btnHome);
-
-        btnInsurance.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(Activityuserprofile.this, ActivityInsuranceInfo.class);
-                startActivity(intent);
-            }
-        });
-
         btnHome.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(Activityuserprofile.this, ActivityHome.class);
+                Intent intent = new Intent(activityinsuranceinfo2.this, ActivityHome.class);
                 startActivity(intent);
             }
         });

@@ -2,6 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+
     <application
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
@@ -12,6 +14,27 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.SENG_GROUP_APP_PROJECT"
         tools:targetApi="31">
+        <activity
+            android:name=".Activitynetwork"
+            android:exported="false" />
+        <activity
+            android:name=".activitydriverinsuranceinfo2"
+            android:exported="false" />
+        <activity
+            android:name=".activityauthordriverinfo"
+            android:exported="false" />
+        <activity
+            android:name=".activityinsuranceinfo2"
+            android:exported="false" />
+        <activity
+            android:name=".activityuserprofile2"
+            android:exported="false" />
+        <activity
+            android:name=".Activityuserprofiledata"
+            android:exported="false" />
+        <activity
+            android:name=".Activityregister"
+            android:exported="false" />
         <activity
             android:name=".Activitysetting"
             android:exported="false" />

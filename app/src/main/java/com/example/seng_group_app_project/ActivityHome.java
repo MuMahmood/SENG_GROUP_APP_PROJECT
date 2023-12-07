@@ -14,11 +14,32 @@ public class ActivityHome extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
 
-        Button btnUserProfile = findViewById(R.id.btnUserProfile);
+        Button btnUserProfile = findViewById(R.id.btnUserProfileData);
         btnUserProfile.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(ActivityHome.this, Activityuserprofile.class);
+                startActivity(intent);
+            }
+        });
+
+        // Inside your ActivityHome class
+
+        Button btnactivitynetowrk = findViewById(R.id.btnDrivingProfileNetwork);
+        btnactivitynetowrk.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(ActivityHome.this, Activitynetwork.class);
+                startActivity(intent);
+            }
+        });
+
+
+        Button btnactivitydrivinganalytics = findViewById(R.id.btnDriverAnalytics);
+        btnactivitydrivinganalytics.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(ActivityHome.this, Activitydrivinganalytics.class);
                 startActivity(intent);
             }
         });

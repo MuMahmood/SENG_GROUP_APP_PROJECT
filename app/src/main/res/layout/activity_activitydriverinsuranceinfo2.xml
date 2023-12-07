@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/screenback">
+
+    <TextView
+        android:id="@+id/Title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:textColor="@color/black"
+        android:text="Driver Insurance Information"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="20dp"
+        android:layout_marginTop="20dp"/>
+
+    <!-- Insurance Number -->
+    <TextView
+        android:id="@+id/InsuranceNumber"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Insurance Number: abc123"
+        android:textSize="18sp"
+        android:padding="16dp"/>
+
+    <!-- License Plate Number -->
+    <TextView
+        android:id="@+id/LicensePlateNumber"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="License Plate Number: A1B2C3"
+        android:textSize="18sp"
+        android:padding="16dp"/>
+
+    <!-- VIN Number -->
+    <TextView
+        android:id="@+id/VinNumber"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="VIN Number: 1M8GDM9AXKP042788"
+        android:textSize="18sp"
+        android:padding="16dp"/>
+
+    <!-- Driver License Number -->
+    <TextView
+        android:id="@+id/DriverLicenseNumber"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Driver License Number: abcde12345"
+        android:textSize="18sp"
+        android:padding="16dp"/>
+
+    <!-- Insurance Phone Number -->
+    <Button
+        android:id="@+id/btnInsurancePhone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Insurance Phone Number"
+        android:padding="16dp"/>
+
+    <!-- Emergency Services Button -->
+    <Button
+        android:id="@+id/btnEmergencyServices"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Emergency Services"
+        android:padding="16dp"/>
+
+    <!-- Tow Truck Button -->
+    <Button
+        android:id="@+id/btnTowTruck"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Tow Truck"
+        android:padding="16dp"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@android:color/black"
+        android:layout_marginTop="150dp"
+        android:layout_marginBottom="8dp"/>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_gravity="center_horizontal">
+
+        <Button
+            android:id="@+id/btnHome"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Home"
+            android:layout_marginRight="16dp"/>
+
+        <Button
+            android:id="@+id/btnInsurance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Insurance" />
+
+    </LinearLayout>
+</LinearLayout>
