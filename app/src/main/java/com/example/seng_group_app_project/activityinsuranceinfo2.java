@@ -18,7 +18,7 @@ public class activityinsuranceinfo2 extends AppCompatActivity {
         btnHome.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(activityinsuranceinfo2.this, ActivityHome.class);
+                Intent intent = new Intent(activityinsuranceinfo2.this, home2.class);
                 startActivity(intent);
             }
         });

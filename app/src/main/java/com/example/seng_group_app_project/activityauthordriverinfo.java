@@ -20,7 +20,7 @@ public class activityauthordriverinfo extends AppCompatActivity {
         btnInsurance.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(activityauthordriverinfo.this, ActivityInsuranceInfo.class);
+                Intent intent = new Intent(activityauthordriverinfo.this, activitydriverinsuranceinfo2.class);
                 startActivity(intent);
             }
         });
@@ -28,7 +28,7 @@ public class activityauthordriverinfo extends AppCompatActivity {
         btnHome.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(activityauthordriverinfo.this, ActivityHome.class);
+                Intent intent = new Intent(activityauthordriverinfo.this, home2.class);
                 startActivity(intent);
             }
         });

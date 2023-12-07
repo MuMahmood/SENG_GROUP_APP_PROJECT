@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/screenback"
+    android:orientation="vertical"
+    android:padding="10dp">
+
+    <!-- Header Section -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:background="@drawable/box"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <!-- Good Morning Text -->
+        <TextView
+            android:id="@+id/goodMorningText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:text="Good Morning! User"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+
+        <!-- Date and Weather Display -->
+        <TextView
+            android:id="@+id/infoText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="Date: December 7, 2023\nTemperature: 2°C"
+            android:textSize="18sp" />
+    </LinearLayout>
+
+    <!-- Dashboard Title -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp"
+        android:text="Dashboard"
+        android:textSize="22sp"
+        android:textStyle="bold" />
+
+    <GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:columnCount="3"
+        android:rowCount="3"
+        android:alignmentMode="alignMargins"
+        android:columnOrderPreserved="false"
+        android:padding="5dp">
+
+        <!-- Driver Analytics Button -->
+        <Button
+            android:id="@+id/btnDriverAnalytics"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_columnWeight="1"
+            android:text="Driver Analytics" />
+
+        <!-- User Profile Button -->
+        <Button
+            android:id="@+id/btnUserProfileData"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_columnWeight="1"
+            android:text="User Profile" />
+
+        <!-- Driving Profile Network Button -->
+        <Button
+            android:id="@+id/btnDrivingProfileNetwork"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_columnWeight="1"
+            android:text="Driving Network" />
+
+        <!-- Driver Insurance Info Button -->
+        <Button
+            android:id="@+id/btnDriverInsuranceInfo"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_columnWeight="1"
+            android:text="Driver Insurance Info" />
+
+        <!-- Authorized Driver Info Button -->
+        <Button
+            android:id="@+id/btnAuthorizedDriverInfo"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_columnWeight="1"
+            android:text="Authorized Driver Info" />
+
+        <!-- Insurance Info Button -->
+        <Button
+            android:id="@+id/btnInsuranceInfo"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_columnWeight="1"
+            android:text="Insurance Info" />
+
+        <!-- Settings Button -->
+    </GridLayout>
+
+    <Button
+        android:id="@+id/btnSettings"
+        android:layout_width="379dp"
+        android:layout_height="wrap_content"
+        android:layout_columnSpan="3"
+        android:layout_gravity="fill_horizontal"
+        android:text="Settings" />
+
+</LinearLayout>
+

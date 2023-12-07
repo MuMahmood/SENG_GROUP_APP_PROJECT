@@ -15,6 +15,18 @@
         android:theme="@style/Theme.SENG_GROUP_APP_PROJECT"
         tools:targetApi="31">
         <activity
+            android:name=".setting2"
+            android:exported="false" />
+        <activity
+            android:name=".drivinganalytics2"
+            android:exported="false" />
+        <activity
+            android:name=".activitynetwork2"
+            android:exported="false" />
+        <activity
+            android:name=".home2"
+            android:exported="false" />
+        <activity
             android:name=".Activitynetwork"
             android:exported="false" />
         <activity

@@ -40,40 +40,55 @@ public class MainActivity extends AppCompatActivity {
                 String enteredUsername = usernameEditText.getText().toString();
                 String enteredPassword = passwordEditText.getText().toString();
 
+                // Check if the fields are empty
                 if (enteredUsername.isEmpty() || enteredPassword.isEmpty()) {
                     Toast.makeText(MainActivity.this, "Please enter both username and password", Toast.LENGTH_LONG).show();
                     return;
                 }
 
-                Query query = databaseReference.orderByChild("username").equalTo(enteredUsername);
-                query.addListenerForSingleValueEvent(new ValueEventListener() {
-                    @Override
-                    public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                        if (dataSnapshot.exists()) {
-                            for (DataSnapshot user : dataSnapshot.getChildren()) {
-                                String password = user.child("password").getValue(String.class);
-                                String userType = user.child("userType").getValue(String.class); // Assuming 'userType' is stored in the database
+                // Check for admin credentials
 
-                                if (password != null && password.equals(enteredPassword)) {
-                                    Toast.makeText(MainActivity.this, "Login successful", Toast.LENGTH_LONG).show();
-                                    Intent intent = new Intent(MainActivity.this, ActivityHome.class);
-                                    intent.putExtra("USER_TYPE", userType); // Send user type to ActivityHome
-                                    startActivity(intent);
-                                    finish();
-                                } else {
-                                    Toast.makeText(MainActivity.this, "Invalid username or password", Toast.LENGTH_LONG).show();
+                if (enteredUsername.equals("Muhammad1") && enteredPassword.equals("Muhammad1")) {
+                    Toast.makeText(MainActivity.this, "Login Successful", Toast.LENGTH_SHORT).show();
+                    Intent intent = new Intent(MainActivity.this, home2.class); // Assuming the activity is named Home2
+                    startActivity(intent);
+                }
+                else if (enteredUsername.equals("admin") && enteredPassword.equals("admin")) {
+                    Intent intent = new Intent(MainActivity.this, ActivityHome.class);
+                    startActivity(intent);
+                    Toast.makeText(MainActivity.this, "Login Successful", Toast.LENGTH_SHORT).show();
+                } else {
+                    // Proceed with Firebase authentication for non-admin users
+                    Query query = databaseReference.orderByChild("username").equalTo(enteredUsername);
+                    query.addListenerForSingleValueEvent(new ValueEventListener() {
+                        @Override
+                        public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                            if (dataSnapshot.exists()) {
+                                for (DataSnapshot user : dataSnapshot.getChildren()) {
+                                    String password = user.child("password").getValue(String.class);
+                                    String userType = user.child("userType").getValue(String.class); // Assuming 'userType' is stored in the database
+
+                                    if (password != null && password.equals(enteredPassword)) {
+                                        Toast.makeText(MainActivity.this, "Login successful", Toast.LENGTH_LONG).show();
+                                        Intent intent = new Intent(MainActivity.this, ActivityHome.class);
+                                        intent.putExtra("USER_TYPE", userType); // Send user type to ActivityHome
+                                        startActivity(intent);
+                                        finish();
+                                    } else {
+                                        Toast.makeText(MainActivity.this, "Invalid username or password", Toast.LENGTH_LONG).show();
+                                    }
                                 }
+                            } else {
+                                Toast.makeText(MainActivity.this, "User not found", Toast.LENGTH_LONG).show();
                             }
-                        } else {
-                            Toast.makeText(MainActivity.this, "User not found", Toast.LENGTH_LONG).show();
                         }
-                    }
 
-                    @Override
-                    public void onCancelled(@NonNull DatabaseError databaseError) {
-                        Toast.makeText(MainActivity.this, "Database error: " + databaseError.getMessage(), Toast.LENGTH_LONG).show();
-                    }
-                });
+                        @Override
+                        public void onCancelled(@NonNull DatabaseError databaseError) {
+                            Toast.makeText(MainActivity.this, "Database error: " + databaseError.getMessage(), Toast.LENGTH_LONG).show();
+                        }
+                    });
+                }
             }
         });
 

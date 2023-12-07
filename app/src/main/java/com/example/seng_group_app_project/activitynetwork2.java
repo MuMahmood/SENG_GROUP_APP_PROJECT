@@ -26,12 +26,13 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-public class Activitynetwork extends AppCompatActivity {
+public class activitynetwork2 extends AppCompatActivity {
+
 
     private EditText messageInput;
     private Button sendButton;
     private RecyclerView chatRecyclerView;
-    private MessageAdapter messageAdapter;
+    private Activitynetwork.MessageAdapter messageAdapter;
     private Button btnHome;
 
     @Override
@@ -44,7 +45,7 @@ public class Activitynetwork extends AppCompatActivity {
         chatRecyclerView = findViewById(R.id.chatRecyclerView);
         btnHome = findViewById(R.id.btnHome);
 
-        messageAdapter = new MessageAdapter(new ArrayList<String>());
+        messageAdapter = new Activitynetwork.MessageAdapter(new ArrayList<String>());
         chatRecyclerView.setLayoutManager(new LinearLayoutManager(this));
         chatRecyclerView.setAdapter(messageAdapter);
 
@@ -57,7 +58,7 @@ public class Activitynetwork extends AppCompatActivity {
                     messageInput.setText("");
                     updateMessagesDisplay();
                 } else {
-                    Toast.makeText(Activitynetwork.this, "Please enter a message", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(activitynetwork2.this, "Please enter a message", Toast.LENGTH_SHORT).show();
                 }
             }
         });
@@ -65,7 +66,7 @@ public class Activitynetwork extends AppCompatActivity {
         btnHome.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(Activitynetwork.this, ActivityHome.class);
+                Intent intent = new Intent(activitynetwork2.this, home2.class);
                 startActivity(intent);
             }
         });
@@ -74,7 +75,7 @@ public class Activitynetwork extends AppCompatActivity {
 
     private void updateMessagesDisplay() {
         List<String> messages = Arrays.asList(readMessagesFromFile().split("\n"));
-        messageAdapter = new MessageAdapter(messages);
+        messageAdapter = new Activitynetwork.MessageAdapter(messages);
         chatRecyclerView.setAdapter(messageAdapter);
     }
 
@@ -111,22 +112,21 @@ public class Activitynetwork extends AppCompatActivity {
         return messages.toString();
     }
 
-    public static class MessageAdapter extends RecyclerView.Adapter<MessageAdapter.ChatMessageViewHolder> {
+    public class MessageAdapter extends RecyclerView.Adapter<Activitynetwork.MessageAdapter.ChatMessageViewHolder> {
         private List<String> messages;
 
         public MessageAdapter(List<String> messages) {
             this.messages = messages;
         }
 
-        @NonNull
         @Override
-        public ChatMessageViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+        public Activitynetwork.MessageAdapter.@NonNull ChatMessageViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
             View view = LayoutInflater.from(parent.getContext()).inflate(android.R.layout.simple_list_item_1, parent, false);
-            return new ChatMessageViewHolder(view);
+            return new Activitynetwork.MessageAdapter.ChatMessageViewHolder(view);
         }
 
         @Override
-        public void onBindViewHolder(@NonNull ChatMessageViewHolder holder, int position) {
+        public void onBindViewHolder(Activitynetwork.MessageAdapter.@NonNull ChatMessageViewHolder holder, int position) {
             holder.messageText.setText(messages.get(position));
         }
 
@@ -135,7 +135,7 @@ public class Activitynetwork extends AppCompatActivity {
             return messages.size();
         }
 
-        static class ChatMessageViewHolder extends RecyclerView.ViewHolder {
+        class ChatMessageViewHolder extends RecyclerView.ViewHolder {
             TextView messageText;
 
             public ChatMessageViewHolder(@NonNull View itemView) {
